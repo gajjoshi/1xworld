@@ -101,6 +101,52 @@ margin-right: 20px;
   .line3 {
     animation-delay: 2s; /* Starts after line 2 (1s duration) */
   }
+
+
+
+  /* YouTube frame styling */
+  .yt-frame {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    width: 300px;
+    margin-left: 8vw;
+    
+  }
+  .heading {
+    text-align: center;
+    font-size: 23px;
+    margin-top: 80px;
+    color: white;
+    text-transform: uppercase; /* All uppercase letters */
+
+}
+.heading2 {
+    text-align: center;
+    font-size: 23px;
+    margin-top: 0px;
+    color: white;
+    text-transform: uppercase; /* All uppercase letters */
+
+}
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+    z-index: 1000; /* Ensures it stays above other elements */
+    animation: pulse 1.5s infinite ease-in-out; /* Smooth scaling effect */
+}
+
+
+  iframe {
+    width: 360px;
+    height: auto;
+    height: 315px;
+    border-radius: 10px;
+  }
   
   /* Keyframes for sliding in from the right */
   @keyframes slideInFromRight {
@@ -113,4 +159,19 @@ margin-right: 20px;
       opacity: 1;
     }
   }
+
+  @keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+  
+  
   
