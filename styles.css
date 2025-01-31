@@ -1,0 +1,37 @@
+/* Set the black background for the page */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Position the logo image at the top left */
+.logo {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 100px;
+    height: auto;
+}
+
+/* Animated text styles */
+.animated-text {
+    font-size: 48px;      /* Big font size */
+    color: white;
+    text-align: center;
+    margin-top: 150px;    /* Adjust margin as needed to position below the logo */
+    animation: float 3s ease-in-out infinite;  /* Gentle floating animation */
+}
+
+/* Keyframes for the floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
