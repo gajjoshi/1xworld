@@ -10,18 +10,44 @@ body {
     position: absolute;
     top: 0;
     left: 10px;
-    width: 100px;
+    width: 150px;
     height: auto;
   }
   
   /* Container for the animated text with a white border */
   .animated-text {
-    text-align: center;
-    margin-top: 150px; /* Adjust margin as needed to position below the logo */
-    border: 2px solid rgb(255, 0, 0); /* White boundary */
+margin-left: 20px; 
+margin-right: 20px; 
+
+   text-align: center;
+    margin-top: 15vh; /* Adjust margin as needed to position below the logo */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
     padding: 20px;         /* Optional: adds space between the border and the text */
-  }
-  
+        /* Frosted glass effect */
+        background: rgba(255, 255, 255, 0.2); /* Light white transparent background */
+        backdrop-filter: blur(10px); /* Blur effect for frosted look */
+        -webkit-backdrop-filter: blur(10px); /* Ensures compatibility with Safari */
+        border-radius: 10px; /* Optional: Rounds the corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+
+
+  }.animated-text2 {
+    margin-left: 20px; 
+    margin-right: 20px; 
+    text-align: center;
+    margin-top: 10px; /* Adjust margin as needed to position below the logo */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    padding: 20px; /* Adds space between the border and the text */
+    border-radius: 10px; /* Rounds the corners */
+    color: white; /* Ensures text visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+
+    /* Frosted glass effect */
+    background: linear-gradient(45deg, rgba(0, 255, 0, 0.2), rgba(0, 128, 0, 0.2)); /* Semi-transparent green gradient */
+    backdrop-filter: blur(10px); /* Blurs the background behind the container */
+    -webkit-backdrop-filter: blur(10px); /* Ensures compatibility with Safari */
+}
+
   /* Style for each animated text line */
   .animated-text .line {
     font-size: 25px;           /* Big font size */
@@ -30,6 +56,38 @@ body {
     text-transform: uppercase; /* All uppercase letters */
     animation: slideInFromRight 1s forwards;
   }
+    /* Style for each animated text line */
+    .animated-text2 .line {
+        font-size: 25px;           /* Big font size */
+        color: white;
+        opacity: 0;                /* Start hidden */
+        text-transform: uppercase; /* All uppercase letters */
+        animation: slideInFromRight 1s forwards;
+      }
+  /* CTA Button Container */
+.cta-container {
+    text-align: center;
+    margin-top: 40px; /* Adjust spacing as needed */
+  }
+  /* CTA Button Styling */
+.cta-button {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle translucent white */
+    color: white;
+    font-size: 24px;
+    padding: 15px 30px;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly brighter on hover */
+    color: red;
+    transform: scale(1.05);
+  }
+  
   
   /* Set sequential delays so that each line starts after the previous one finishes */
   .line1 {
