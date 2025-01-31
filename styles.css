@@ -3,35 +3,56 @@ body {
     background-color: black;
     margin: 0;
     padding: 0;
-}
-
-/* Position the logo image at the top left */
-.logo {
+  }
+  
+  /* Position the logo image at the top left */
+  .logo {
     position: absolute;
     top: 0;
     left: 10px;
     width: 100px;
     height: auto;
-}
-
-/* Animated text styles */
-.animated-text {
-    font-size: 48px;      /* Big font size */
-    color: white;
+  }
+  
+  /* Container for the animated text with a white border */
+  .animated-text {
     text-align: center;
-    margin-top: 150px;    /* Adjust margin as needed to position below the logo */
-    animation: float 3s ease-in-out infinite;  /* Gentle floating animation */
-}
-
-/* Keyframes for the floating animation */
-@keyframes float {
+    margin-top: 150px; /* Adjust margin as needed to position below the logo */
+    border: 2px solid rgb(255, 0, 0); /* White boundary */
+    padding: 20px;         /* Optional: adds space between the border and the text */
+  }
+  
+  /* Style for each animated text line */
+  .animated-text .line {
+    font-size: 25px;           /* Big font size */
+    color: white;
+    opacity: 0;                /* Start hidden */
+    text-transform: uppercase; /* All uppercase letters */
+    animation: slideInFromRight 1s forwards;
+  }
+  
+  /* Set sequential delays so that each line starts after the previous one finishes */
+  .line1 {
+    animation-delay: 0s;
+  }
+  
+  .line2 {
+    animation-delay: 1s; /* Starts after line 1 (1s duration) */
+  }
+  
+  .line3 {
+    animation-delay: 2s; /* Starts after line 2 (1s duration) */
+  }
+  
+  /* Keyframes for sliding in from the right */
+  @keyframes slideInFromRight {
     0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
+      transform: translateX(100%);
+      opacity: 0;
     }
     100% {
-        transform: translateY(0);
+      transform: translateX(0);
+      opacity: 1;
     }
-}
+  }
+  
