@@ -16,7 +16,7 @@ body {
   opacity: 0;
 
   /* Apply animation */
-  animation: fadeIn 2s ease-in forwards;
+  animation: fadeIn 1s ease-in forwards;
 }
 
 /* Keyframes for fade-in animation */
